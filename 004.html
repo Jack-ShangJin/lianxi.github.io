@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shell Practice</title>
+</head>
+
+<body>
+  <a href="index.html">首页</a>
+  <!-- 单元格属性在table中进行修改 -->
+  <!-- cellpadding内边距，cellspacing外边距 -->
+  <table align="center" border="1" cellpadding="20" cellspacing="0">
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>相关链接</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>刘德华</td>
+        <td>男</td>
+        <td>56</td>
+        <td><a href="http://www.baidu.com">相关简介</a></td>
+      </tr>
+      <tr>
+        <td>张学友</td>
+        <td>男</td>
+        <td>58</td>
+      </tr>
+      <tr>
+        <td>郭富城</td>
+        <td>男</td>
+        <td>51</td>
+      </tr>
+      <tr>
+        <td>黎 明</td>
+        <td>男</td>
+        <td>57</td>
+      </tr>
+      <tr>
+        <td>尚进</td>
+        <td>男</td>
+        <td>18</td>
+        <td>
+          <a href="http://shangjin.rthe.xyz" target="blank">相关链接</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <!-- 第二部分。合并单元格 -->
+  <h5>合并单元格</h5>
+  <table align="center" border="1" width="500" height="249" cellspacing="0">
+    <tr>
+      <td></td>
+      <td colspan="2"></td>
+      <!-- 第一行只有两个单元格删除第三个单元格即可 -->
+    </tr>
+    <tr>
+      <td rowspan="2"></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <!-- <td></td> -->
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <br />
+</body>
+
+</html>
