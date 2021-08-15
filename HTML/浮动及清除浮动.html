@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            background-color: #f3f5f2;
+        }
+
+        .box {
+            width: 1226px;
+            height: 615px;
+            margin: 100px auto;
+        }
+
+        .box .left {
+            width: 234px;
+            height: 615px;
+            background-color: #edf0ed;
+            float: left;
+        }
+
+        .box .right {
+            width: 992px;
+            height: 615px;
+            float: right;
+        }
+
+        .box .right ul li {
+            height: 300px;
+            width: 234px;
+            background-color: #fcfffc;
+            float: left;
+            margin-left: 14px;
+            margin-bottom: 14px;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        /* 指针覆盖之后阴影效果 */
+        .box .right ul li:hover {
+            box-shadow: 1px 1px 10px 10px#e7eae7;
+            margin-left: 13px;
+        }
+
+        /* 从此往下全都是测试清除浮动的内容 */
+        /* ******************************************************************** */
+        /* 双伪元素清除浮动 */
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .container {
+            width: 500px;
+            border: 1px solid blue;
+            margin: 100px auto;
+            /* overflow: hidden; */
+        }
+
+        .test1 {
+            float: left;
+            height: 200px;
+            width: 100px;
+            background-color: pink;
+        }
+
+        .test2 {
+            float: left;
+            height: 300px;
+            width: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index.html">首页</a>
+    <br>
+    <div class="box">
+        <div class="left">img</div>
+        <div class="right">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container clearfix">
+        <div class="test1"></div>
+        <!-- <div class="test3"></div> -->
+        <div class="test2"></div>
+    </div>
+</body>
+
+</html>

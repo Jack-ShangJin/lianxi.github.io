@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css特性</title>
+    <link rel="stylesheet" href="../CSS/链接优化.css">
+    <style>
+        body {
+            font: 400 14px/1.5 "Microsoft yahei";
+        }
+
+        div {
+            color: red;
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        /* 类选择器的优先级高于元素选择器 */
+        .test {
+            color: orange;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        #demo {
+            color: skyblue;
+        }
+
+        li {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index.html">首页</a>
+    <div class="test">div容器</div>
+    <p>容器</p>
+    <ul id="demo">
+        <!-- 子代从父代继承来的权重为零，一旦有自己的定义，则遵循自己的定义 -->
+        <li>未指定文字大小</li>
+    </ul>
+</body>
+
+</html>
