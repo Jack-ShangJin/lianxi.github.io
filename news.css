@@ -1,0 +1,26 @@
+h1 {
+  font-weight: 400;
+}
+p {
+  text-indent: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+.search {
+  width: 170px;
+}
+.btn {
+  font-weight: 700;
+}
+.gray {
+  color: gray;
+}
+.center {
+  text-align: center;
+}
+.box {
+  width: 930px;
+}
