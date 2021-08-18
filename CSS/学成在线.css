@@ -5,7 +5,6 @@
 }
 a {
   text-decoration: none;
-  color: #424243;
 }
 /* 版心 */
 .w {
@@ -15,46 +14,72 @@ a {
 li {
   list-style: none;
 }
+/* 头部开始 */
 .header {
   height: 42px;
   margin: 30px auto;
-  /* border: 1px solid ; */
-  /* background-color: pink; */
-  background: rgba(170, 169, 169, 0.2);
 }
 .logo,
 .nav,
 .nav ul > li,
 .search,
+.search input,
+.search button,
 .user,
 .pic {
   float: left;
 }
+/* 搜索按钮  */
 .button {
   float: right;
 }
+/* 导航栏模块 */
 .nav {
   margin: 0px 40px;
+  /* width: 400px; */
 }
 .nav ul > li {
   display: inline-block;
   height: 42px;
-  font: 400 16px/40px "Microsoft yahei";
+  font: 400 18px/40px "Microsoft yahei";
+}
+/* 给a链接设置一个padding值，不设置宽度，不撑开盒子*/
+.nav ul li a {
+  text-decoration: none;
+  color: #424243;
 }
 .nav ul li a {
-  display: inline-block;
+  display: block;
   padding: 0 5px;
   margin: 0 25px;
 }
 .nav ul li a:hover {
-  border-bottom: 2px solid #00a4ff;
+  border-bottom: 2px solid blue;
+  color: blue;
 }
+/* 搜索模块 */
 .search {
-  height: 40px;
-  width: 410px;
-  /* background-color: gray; */
-  border: 1px solid #77c9ff;
+  height: 42px;
+  width: 412px;
+  background-color: gray;
+  margin-left: 40px;
 }
+.search input {
+  width: 345px;
+  height: 40px;
+  border: 2px solid #77c9ff;
+  border-right: 0px;
+  color: gray;
+  padding-left: 15px;
+}
+.search button {
+  width: 50px;
+  height: 42px;
+  background-color: pink;
+  border: 0px;
+  background-image: url(../xczx/images/fa-search.png);
+}
+/* 用户模块 */
 .pic {
   margin-right: 5px;
   margin-top: 6px;
@@ -64,4 +89,90 @@ li {
   height: 42px;
   padding: 0px 20px;
   font: 16px/42px "Microsoft yahei";
+}
+/* banner开始 */
+.banner {
+  height: 420px;
+  background-color: #1c0c6f;
+}
+.banner .w {
+  height: 420px;
+  background: url(../xczx/images/banner2.png) no-repeat top center;
+}
+/* 侧边搜索栏 */
+.banner .subnav {
+  float: left;
+  width: 190px;
+  height: 408px;
+  background: rgba(0, 0, 0, 0.3);
+  padding-top: 12px;
+}
+.banner .subnav ul li {
+  height: 44px;
+  width: 190px;
+}
+.banner .subnav ul li a {
+  display: block;
+  float: left;
+  height: 44px;
+  width: 164px;
+  font: 16px/44px "Microsoft yahei";
+  color: white;
+  text-indent: 20px;
+}
+.banner .subnav ul li span {
+  float: right;
+  height: 44px;
+  width: 6px;
+  background-color: red;
+  margin-right: 20px;
+  background: url(http://www.5km2.com/images/arrow.png) no-repeat center;
+}
+.banner .subnav ul li:hover {
+  background-color: #0483dd;
+}
+/* 课程表开始 */
+.banner .course {
+  height: 300px;
+  width: 230px;
+  margin-top: 50px;
+  float: right;
+  background-color: #ffffff;
+}
+.banner .course .title {
+  width: 230px;
+  height: 50px;
+  margin-bottom: 8px;
+  color: white;
+  font: 700 20px/50px "Microsoft yahei";
+  text-align: center;
+  background-color: skyblue;
+}
+.course .c1,
+.course .c2,
+.course .c3 {
+  height: 60px;
+  width: 190px;
+  margin: 0 auto;
+  border-bottom: 1px solid #efefef;
+  /* background-color: pink; */
+}
+.course h4 {
+  padding-top: 12px;
+  font: 400 15px "Microsoft yahei";
+}
+.course p {
+  color: #b1b1b1;
+  font: 400 12px "Microsoft yahei";
+}
+.course a {
+  display: block;
+  height: 40px;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 4px;
+  /* background-color: pink; */
+  font: 400 16px/40px "Microsoft yahei";
+  text-align: center;
+  border: 2px solid #00a4ff;
 }
