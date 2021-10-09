@@ -3,16 +3,34 @@
   margin: 0;
   padding: 0;
 }
+/* 链接清除下划线 */
 a {
   text-decoration: none;
 }
 /* 版心 */
 .w {
   width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
+/* li清除圆点  */
 li {
   list-style: none;
+}
+/* 清除浮动 */
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  /*兼容IE6,7*/
+  *zoom: 1;
+}
+body {
+  background-color: #f3f5f7;
 }
 /* 头部开始 */
 .header {
@@ -67,15 +85,16 @@ li {
 .search input {
   width: 345px;
   height: 40px;
-  border: 2px solid #77c9ff;
+  border: 1px solid #77c9ff;
   border-right: 0px;
   color: gray;
   padding-left: 15px;
+  outline: none;
 }
 .search button {
   width: 50px;
   height: 42px;
-  background-color: pink;
+  /* background-color: pink; */
   border: 0px;
   background-image: url(../xczx/images/fa-search.png);
 }
@@ -93,7 +112,7 @@ li {
 /* banner开始 */
 .banner {
   height: 420px;
-  background-color: #1c0c6f;
+  background-color: #1c036c;
 }
 .banner .w {
   height: 420px;
@@ -123,10 +142,12 @@ li {
 .banner .subnav ul li span {
   float: right;
   height: 44px;
-  width: 6px;
-  background-color: red;
-  margin-right: 20px;
-  background: url(http://www.5km2.com/images/arrow.png) no-repeat center;
+  width: 12px;
+  color: #ffffff;
+  line-height: 44px;
+  /* background-color: red; */
+  margin-right: 10px;
+  /* background: url(http://www.5km2.com/images/arrow.png) no-repeat center; */
 }
 .banner .subnav ul li:hover {
   background-color: #0483dd;
@@ -171,8 +192,195 @@ li {
   width: 200px;
   margin: 0 auto;
   margin-top: 4px;
+  border: 2px solid #00a4ff;
   /* background-color: pink; */
   font: 400 16px/40px "Microsoft yahei";
   text-align: center;
-  border: 2px solid #00a4ff;
 }
+/* banner结束 */
+/* ************************************************************ */
+/* .tuijian {
+  margin-top: 5px;
+  height: 60px;
+  background-color: #fcfffc;
+  box-shadow: 0px 1px 2px 2px #dddfe1;
+}
+.tuijian ul li {
+  float: left;
+  height: 60px;
+  margin-left: 0;
+}
+.tuijian ul li a {
+  display: block;
+  float: left;
+  width: 130px;
+  margin-top: 22px;
+  text-align: center;
+  border-right: 1px solid #bfbfbf;
+  font: 400 16px/16px "Microsoft yahei";
+}
+.tuijian ul li .last {
+  border: none;
+}
+.tuijian ul .firstone a {
+  color: #00a4ff;
+  font-weight: 700;
+}
+.tuijian ul .mod {
+  display: block;
+  float: right;
+  height: 60px;
+  margin-right: 30px;
+  font: 400 14px/60px "Microsoft yahei";
+  color: #00a4ff;
+} */
+/* *********************************************************** */
+/* 精品推荐小模块开始*/
+.tuijian {
+  height: 60px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  /* 行高绝杀 */
+  line-height: 60px;
+  box-shadow: 0px 1px 2px 2px #e6e6e6;
+}
+.tuijian h3 {
+  float: left;
+  margin-left: 30px;
+  font-size: 16px;
+  color: #00a4ff;
+}
+.tuijian ul {
+  float: left;
+  margin-left: 30px;
+}
+.tuijian ul li {
+  float: left;
+}
+.tuijian ul li a {
+  padding: 0 30px;
+  color: #424243;
+  border-left: 1px solid #bfbfbf;
+}
+.tuijian ul li a:hover {
+  color: #0483dd;
+}
+.tuijian .mod {
+  float: right;
+  margin-right: 30px;
+  font-size: 14px;
+  color: #00a4ff;
+}
+/* 精品推荐小模块结束 */
+/* 精品推荐大模块开始*/
+.box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* 头部 */
+.box-hd {
+  height: 45px;
+}
+.box-hd h3 {
+  float: left;
+  font-size: 20px;
+  color: #ffffff;
+}
+.box-hd a {
+  float: right;
+  font-size: 12px;
+  line-height: 45px;
+  color: #ffffff;
+  margin-right: 30px;
+}
+/* 底部 */
+.box-bd ul {
+  width: 1225px;
+}
+.box-bd ul li {
+  position: relative;
+  height: 271px;
+  width: 230px;
+  float: left;
+  margin-bottom: 13px;
+  margin-right: 12.5px;
+  background-color: #ffffff;
+}
+.box-bd ul li:hover {
+  box-shadow: 1px 1px 3px 5px rgba(0, 0, 0, 0.05);
+  transition: 0.5s;
+}
+.box-bd ul li .hot {
+	position: absolute;
+	right: -5px;
+	background:rgba(188, 43, 14, 0.4);
+}
+.box-bd ul li a img {
+  width: 100%;
+}
+.box ul li h4 {
+  font-size: 14px;
+  padding: 20px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.box-bd .info {
+  font-size: 12px;
+  color: #a9a9a9;
+  padding-left: 20px;
+}
+.box-bd .info span {
+  color: #ff7c2d;
+}
+/* 精品推荐大模块结束 */
+/* 页面尾部开始 */
+.footer {
+  height: 415px;
+  /* width: 1500px; */
+  margin-bottom: 100px;
+  padding-top: 35px;
+  /* background-color: pink; */
+  overflow: hidden;
+  background-color: #fff;
+}
+.copyright {
+  width: 460px;
+  float: left;
+}
+.copyright .btlogo {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.copyright p {
+  margin-left: 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.copyright .download {
+  margin-left: 20px;
+  display: block;
+  width: 120px;
+  height: 35px;
+  color: #00a4ff;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #00a4ff;
+}
+/* 链接模块 */
+.footer .links {
+  float: right;
+  width: 500px;
+}
+.footer .links dl {
+  float: left;
+  margin-left: 80px;
+}
+.footer .links dt {
+  font-size: 16px;
+}
+.footer .links dd a {
+  font-size: 12px;
+  line-height: 20px;
+  color: #424243;
+}
+/* 页面尾部结束 */
